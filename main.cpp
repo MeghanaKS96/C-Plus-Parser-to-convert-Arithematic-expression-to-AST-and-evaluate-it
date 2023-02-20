@@ -1,0 +1,12 @@
+#include "expr.h"
+#include <iostream>
+
+int main() {
+    std::string s;
+     std::cout << "Enter the expression\n";
+     std::cin >> s;
+    auto * ast = BuildAST::build(s);
+    std::cout << ast->evaluate()<<std::endl;
+    std::cout <<"s-Expression is :"<< ast->str(ast);
+     
+}
